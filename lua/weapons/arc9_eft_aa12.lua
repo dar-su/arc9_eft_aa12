@@ -26,7 +26,7 @@ SWEP.Description = [[The AA-12 (Auto Assault-12) Gen 1 is a reliable full-auto 1
 
 
 SWEP.StandardPresets = {
-    -- "[FSB]XQAAAQCWAQAAAAAAAAA9iIIiM7tuo1AtT00OeFD858hFKrq+xXePmJfpPpQndI9fB5smK9tq7fFmw9sMkVWQ2HJtxt0Qgd5jA4HM51gXvvn0DN6Pkvjr68H+JzPQdkcgYThCcRXnJexa5btl0H33kvxEpjKOsa1fxjRXtfg1RvgScrgUCvJongbG/5LNTFaaG0KGqZwWb9JTfgilaREHvAqF3Kf4IlobOAA=",
+    "[Gen.2]XQAAAQAMAQAAAAAAAAA9iIIiM7tuo1AtT00OeFDsSTNPrxxePmcPvwwQ4Hj7LnYvJfulIJ3xdBm4iOtY9pyFCg8CxWpNEepcviqyRuWXPCNkAKWWdKkpvU7BOuakYOy0BnMNCF+b/dtQP0Vl1OKAGHebYAuP/HFb/YXzqygSOJ1hCImGDleaSHK5rlc=",
     -- "[TAC]XQAAAQDhAQAAAAAAAAA9iIIiM7tuo1AtT00OeFD858hFKrq+xXePmJfpPpQndI9fB5smK9tq7fFmw9sMkVWQ2HJtxt0Qgd5jA4HM51gXzhvulynGekGJGVIhcLPf+Jv5hRTEj/HRIyfj/4fUjQFyIXiWDKV2GlLiAh7p5tvo7ZKlYWztA1uHgzjrTpMcHxP3Tj0fPr+FlSMab65nVHwyUJyvLCLAmd6v4YOxx0xwtWTP2xvgV16YtKzG+/uDPGDC9p6PMe/mYAA="
 }
 
