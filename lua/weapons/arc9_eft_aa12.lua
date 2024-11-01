@@ -288,7 +288,7 @@ SWEP.HoldTypeSights = "rpg"
 SWEP.HoldTypeCustomize = "physgun"
 
 SWEP.WorldModelOffset = {
-    Pos = Vector(-13, 5.4, -4),
+    Pos = Vector(-8, 5.4, -6.5),
     Ang = Angle(-7, 0, 180),
     TPIKPos = Vector(-6, 5, -4), -- rpg
     TPIKAng = Angle(-11.5, 0, 180),
