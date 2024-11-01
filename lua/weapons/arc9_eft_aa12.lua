@@ -966,8 +966,16 @@ SWEP.Attachments = {
     },
     
     {
+        PrintName = "Conversion",
+        Category = "eft_aa12_gen",
+        Bone = "mod_stock",
+        Pos = Vector(0, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+    {
         PrintName = "Custom slot",
-        Category = {"eft_custom_slot", "eft_custom_aa12", "eft_aa12_gen"},
+        Category = {"eft_custom_slot", "eft_custom_aa12"},
         Bone = "mod_stock",
         Pos = Vector(0, -5, -2),
         Ang = Angle(0, 0, 0),

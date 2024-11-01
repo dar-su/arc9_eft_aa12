@@ -361,12 +361,5 @@ ATT.SortOrder = -1
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_aa12_gen"}
-ATT.Attachments = {
-    {
-        PrintName = "Custom slot",
-        Pos = Vector(0, 0, 1),
-        Ang = Angle(0, 0, 0),
-        Category = {"eft_custom_slot", "eft_custom_aa12"},
-    },
-}
+
 ARC9.LoadAttachment(ATT, "eft_aa12_gen2")
