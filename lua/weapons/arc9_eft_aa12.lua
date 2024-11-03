@@ -319,25 +319,7 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 SWEP.BulletBones = {
     -- [1] = "patron_in_weapon",
     [1] = "patron_001",
-    [2] = "patron_002",
-    [3] = "patron_003",
-    [4] = "patron_004",
-    [5] = "patron_005",
-    [6] = "patron_006",
-    [7] = "patron_007",
-    [8] = "patron_008",
-    [9] = "patron_009",
-    [10] = "patron_010",
-    [11] = "patron_011",
-    [12] = "patron_012",
-    [13] = "patron_013",
-    [14] = "patron_014",
-    [15] = "patron_015",
-    [16] = "patron_016",
-    [17] = "patron_017",
-    [18] = "patron_018",
-    [19] = "patron_019",
-    [20] = "patron_020",
+    [2] = "patron_002a",
 }
 
 ------------------------- [[[           Sounds            ]]] -------------------------
@@ -401,6 +383,7 @@ SWEP.ReloadHideBoneTables = {
         "patron_018",
         "patron_019",
         "patron_020",
+        "patron_002a",
     },
 }
 
@@ -901,7 +884,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     if data.elements["eft_aa12_mag_20"] then
         data.model:SetBodygroup(8, data.model:GetBodygroup(7))
     elseif data.elements["eft_aa12_mag_8"] then
-        data.model:SetBodygroup(8, data.model:GetBodygroup(7)+13)
+        data.model:SetBodygroup(8, (data.model:GetBodygroup(7) or 0) + 13)
     end
 end
 
