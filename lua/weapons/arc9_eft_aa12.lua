@@ -13,7 +13,7 @@ SWEP.Credits = {
 }
 
 SWEP.PrintName = "MPS AA-12"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_sg")
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_semisg")
 SWEP.Trivia = {
     [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = "Military Police Systems",
     [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "12 Gauge",
