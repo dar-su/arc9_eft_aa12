@@ -84,16 +84,16 @@ SWEP.RecoilRandomSide = 1   -- random left/right
 SWEP.RecoilAutoControl = 3.2 -- autocompenstaion, could be cool if set to high but it also affects main recoil
 
 -- visual recoil   aka visrec
-SWEP.VisualRecoil = 2 -- general multiplier for it
+SWEP.VisualRecoil = 0.6 -- general multiplier for it
 
-SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.7   -- up/down tilt when semi/bursts
-SWEP.VisualRecoilUp                   = 0.5   --   when fullautoing
+SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.4   -- up/down tilt when semi/bursts
+SWEP.VisualRecoilUp                   = 0.3   --   when fullautoing
 SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.004 -- left/right tilt when semi/burst
 SWEP.VisualRecoilSide                 = 0.04   --   when fullautoing
 SWEP.VisualRecoilRoll = 5 -- roll tilt, a visual thing
 
-SWEP.VisualRecoilPunch = 2 -- How far back visrec moves the gun
-SWEP.VisualRecoilPunchSights = 15 -- same but in sights only
+SWEP.VisualRecoilPunch = 0 -- How far back visrec moves the gun
+SWEP.VisualRecoilPunchSights = 3 -- same but in sights only
 
 SWEP.VisualRecoilDampingConst = 130  -- spring settings, this is speed of visrec
 SWEP.VisualRecoilSpringPunchDamping = 5 -- the less this is the more wobbly gun moves
@@ -107,10 +107,11 @@ SWEP.EFT_ShotsToSwitchToFullAutoBehaviur = 2 -- how many shots for switch to ful
 
 SWEP.RecoilKick = 0.8 -- camera roll each shot + makes camera go more up when fullautoing
 
-SWEP.VisualRecoilCenter = Vector(4.28, 19, -3)
-SWEP.SubtleVisualRecoil = 0.75
-SWEP.SubtleVisualRecoilDirection = 2.75
-SWEP.SubtleVisualRecoilSpeed = 1
+SWEP.VisualRecoilCenter = Vector(4.28, 19, -2)
+SWEP.SubtleVisualRecoil = 1.5
+SWEP.SubtleVisualRecoilHipFire = 1.25
+SWEP.SubtleVisualRecoilDirection = 3.25
+SWEP.SubtleVisualRecoilSpeed = 0.7
 
 ------------------------- |||           Damage            ||| -------------------------
 
@@ -758,6 +759,7 @@ SWEP.Attachments = {
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 0),
         RequireElements = {"eft_aa12_gen2"},
+        ExtraSightDistance = -3,
     },
     {
         PrintName = "Ammo type",
