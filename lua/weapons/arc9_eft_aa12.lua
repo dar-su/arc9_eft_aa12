@@ -8,7 +8,7 @@ SWEP.Spawnable = true
 SWEP.PrintName = "MPS AA-12"
 SWEP.Description = [[The AA-12 (Auto Assault-12) Gen 1 is a reliable full-auto 12-gauge shotgun. The first generation features the high-mounted built-in iron sights. This shotgun is distinguished by its recoil pulse accumulation, which makes the recoil feel smooth without sacrificing fire rate and stopping power. The AA-12 is designed for military and police units. Manufactured by Military Police Systems.]]
 
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_semisg")
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_autosg")
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_sg")
 
 SWEP.Trivia = {
@@ -204,8 +204,8 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     -- local rand = 0
     local nomag = false
 
-    if elements["eft_aa12_mag_8"] then ending = 0
-    elseif elements["eft_aa12_mag_20"] then ending = 1
+    if elements["mag8"] then ending = 0
+    elseif elements["mag20"] then ending = 1
     else nomag = true end
 
     -- local empty = swep:Clip1() == 0 and !nomag

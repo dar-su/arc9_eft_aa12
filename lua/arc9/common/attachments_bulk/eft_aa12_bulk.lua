@@ -257,6 +257,7 @@ ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_aa12_mag"}
+ATT.ActivateElements = {"mag8"}
 
 ATT.HasMag = true
 
@@ -284,6 +285,7 @@ ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_aa12_mag"}
+ATT.ActivateElements = {"mag20"}
 
 ATT.HasMag = true
 
