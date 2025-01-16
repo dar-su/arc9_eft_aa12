@@ -194,6 +194,7 @@ SWEP.BulletBones = {
     [2] = "patron_002a",
 }
 
+SWEP.SuppressEmptySuffix = true
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
