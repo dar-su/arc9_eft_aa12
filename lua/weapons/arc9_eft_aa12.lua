@@ -46,9 +46,14 @@ SWEP.IronSights = {
 }
 
 SWEP.ActivePos = Vector(-0.7, -4, -0.27)
-SWEP.CustomizePos = Vector(17, 27, 6)
-SWEP.CustomizeSnapshotFOV = 95
+SWEP.CustomizePos = Vector(15.5, 50, 6)
+SWEP.CustomizeSnapshotFOV = 50
 SWEP.CustomizeRotateAnchor = Vector(15.5, -4.28, -5.23)
+SWEP.CustomizeSnapshotPos = Vector(0, 40, 0)
+
+SWEP.PeekMaxFOV = 60
+SWEP.PeekPosReloading = Vector(3, 2, -1)
+SWEP.PeekAngReloading = Angle(0, 0, -5)
 
 ------------------------- |||           Stats            ||| -------------------------
 
@@ -78,6 +83,8 @@ SWEP.Firemodes = {
     { Mode = 1, PoseParam = 2 }
 }
 
+SWEP.ChamberSize = 0 -- no mag
+SWEP.ClipSize = 0 -- actual chamber (no mag)
 
 SWEP.Slot = 2
 
@@ -255,7 +262,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         
         return anim .. ending .. (empty and "_empty" or "")
     elseif anim == "reload" then
-        return anim .. (empty and "_empty" or "") .. ending
+        return anim .. (empty and "_empty" or "") .. (elements["mag20"] and 1 or "")
     end
 
     -- if anim == "fix" then
@@ -431,9 +438,11 @@ SWEP.Animations = {
         EventTable = { { s = path .. "ash12_trigger_empty.wav", t = 0 } }
     },
 
-    ["reload0"] = {
+    ["reload"] = {
         Source = "reload0",
-        MinProgress = 0.92,
+        RefillProgress = 0.675,
+        PeekProgress = 0.9,
+        MinProgress = 0.95,
         FireASAP = true,
         MagSwapTime = 1.33,
         EventTable = {
@@ -451,7 +460,9 @@ SWEP.Animations = {
     },
     ["reload1"] = {
         Source = "reload1",
-        MinProgress = 0.92,
+        RefillProgress = 0.7,
+        PeekProgress = 0.9,
+        MinProgress = 0.95,
         MagSwapTime = 1.33,
         FireASAP = true,
         EventTable = {
@@ -467,9 +478,11 @@ SWEP.Animations = {
         },
     },
 
-    ["reload_empty0"] = {
+    ["reload_empty"] = {
         Source = "reload_empty0_0", 
-        MinProgress = 0.92,
+        RefillProgress = 0.725,
+        PeekProgress = 0.9,
+        MinProgress = 0.95,
         DropMagAt = 1.6,
         FireASAP = true,
         MagSwapTime = 1.7,
@@ -492,9 +505,11 @@ SWEP.Animations = {
             {hide = 0, t = 1.8}
         },
     },
-    ["1_reload_empty0"] = {
+    ["1_reload_empty"] = {
         Source = "reload_empty0_1", 
-        MinProgress = 0.92,
+        RefillProgress = 0.725,
+        PeekProgress = 0.9,
+        MinProgress = 0.95,
         DropMagAt = 1.5,
         FireASAP = true,
         MagSwapTime = 1.7,
@@ -520,7 +535,9 @@ SWEP.Animations = {
     },
     ["reload_empty1"] = {
         Source = "reload_empty1_0", 
-        MinProgress = 0.92,
+        RefillProgress = 0.725,
+        PeekProgress = 0.9,
+        MinProgress = 0.95,
         DropMagAt = 1.44,
         FireASAP = true,
         MagSwapTime = 1.7,
@@ -544,7 +561,9 @@ SWEP.Animations = {
     },
     ["1_reload_empty1"] = {
         Source = "reload_empty1_1", 
-        MinProgress = 0.92,
+        RefillProgress = 0.725,
+        PeekProgress = 0.9,
+        MinProgress = 0.95,
         DropMagAt = 1.5,
         FireASAP = true,
         MagSwapTime = 1.7,
@@ -772,10 +791,10 @@ SWEP.Attachments = {
         ExtraSightDistance = -3,
     },
     {
-        PrintName = "Ammo type",
+        PrintName = "Ammunition",
         Category = {"eft_ammo_12x70"},
         Bone = "mod_magazine",
-        Pos = Vector(0, 0, -5),
+        Pos = Vector(0, -1.5, -3),
         Ang = Angle(0, 0, 0),
         Installed = "eft_ammo_12x70_7mm",
         Integral = "eft_ammo_12x70_7mm",
@@ -787,7 +806,7 @@ SWEP.Attachments = {
         Installed = "eft_aa12_mag_8",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, -90, 0),
-        Icon_Offset = Vector(0, 0, -1),
+        Icon_Offset = Vector(-1.5, 0, -1),
     },
     
     {
@@ -802,7 +821,7 @@ SWEP.Attachments = {
         PrintName = "Custom slot",
         Category = {"eft_custom_slot", "eft_custom_aa12"},
         Bone = "mod_stock",
-        Pos = Vector(0, -5, -2),
+        Pos = Vector(0, -5, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
