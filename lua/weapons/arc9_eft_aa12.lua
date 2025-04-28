@@ -794,7 +794,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         Category = {"eft_ammo_12x70"},
         Bone = "mod_magazine",
-        Pos = Vector(0, -1.5, -3),
+        Pos = Vector(0, -1.75, -0.9),
         Ang = Angle(0, 0, 0),
         Installed = "eft_ammo_12x70_7mm",
         Integral = "eft_ammo_12x70_7mm",
@@ -806,7 +806,7 @@ SWEP.Attachments = {
         Installed = "eft_aa12_mag_8",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, -90, 0),
-        Icon_Offset = Vector(-1.5, 0, -1),
+        Icon_Offset = Vector(-0.5, 0, -1),
     },
     
     {
