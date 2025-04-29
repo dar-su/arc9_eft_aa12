@@ -177,6 +177,26 @@ function SWEP:SetupDataTables(...)
     self:SetEFTArmedDryfire(true)
 end
 
+SWEP.CustomizePosHook = function(wep, vec)
+	local eles = wep:GetElements()
+	
+	-- Barrels
+	if eles["eft_aa12_barrel_417"] then vec = vec + Vector(2, 2, 0) end
+	if eles["eft_aa12_barrel_457"] then vec = vec + Vector(3.5, 4, 0) end
+	
+	return vec
+end
+
+SWEP.CustomizeRotateAnchorHook = function(wep, vec)
+	local eles = wep:GetElements()
+	
+	-- Barrels
+	if eles["eft_aa12_barrel_417"] then vec = vec + Vector(2, 0, 0) end
+	if eles["eft_aa12_barrel_457"] then vec = vec + Vector(3.5, 0, 0) end
+	
+	return vec
+end
+
 ------------------------- |||           Sounds            ||| -------------------------
 
 local path = "weapons/darsu_eft/aa12/"
@@ -826,26 +846,3 @@ SWEP.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
 }
-
-
-------------------------- |||           CustomizePos            ||| -------------------------
-
-SWEP.CustomizePosHook = function(wep, vec)
-	local eles = wep:GetElements()
-	
-	-- Barrels
-	if eles["eft_aa12_barrel_417"] then vec = vec + Vector(2, 2, 0) end
-	if eles["eft_aa12_barrel_457"] then vec = vec + Vector(3.5, 4, 0) end
-	
-	return vec
-end
-
-SWEP.CustomizeRotateAnchorHook = function(wep, vec)
-	local eles = wep:GetElements()
-	
-	-- Barrels
-	if eles["eft_aa12_barrel_417"] then vec = vec + Vector(2, 0, 0) end
-	if eles["eft_aa12_barrel_457"] then vec = vec + Vector(3.5, 0, 0) end
-	
-	return vec
-end
