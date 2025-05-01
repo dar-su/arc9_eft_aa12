@@ -5,18 +5,18 @@ SWEP.Spawnable = true
 
 ------------------------- |||           Trivia            ||| -------------------------
 
-SWEP.PrintName = "MPS AA-12"
-SWEP.Description = [[The AA-12 (Auto Assault-12) Gen 1 is a reliable full-auto 12-gauge shotgun. The first generation features the high-mounted built-in iron sights. This shotgun is distinguished by its recoil pulse accumulation, which makes the recoil feel smooth without sacrificing fire rate and stopping power. The AA-12 is designed for military and police units. Manufactured by Military Police Systems.]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_aa12")
+SWEP.Description = "eft_weapon_aa12gen1_desc"
 
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_autosg")
-SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_sg")
+SWEP.Class = "eft_class_weapon_autosg"
+SWEP.SubCategory = "eft_subcat_sg"
 
 SWEP.Trivia = {
-    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = "Military Police Systems",
-    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "12 Gauge",
-    [ARC9:GetPhrase("eft_trivia_act") .. "3"] = ARC9:GetPhrase("eft_trivia_act_gas"),
-    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_usa"),
-    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "1980"
+    ["eft_trivia_manuf1"] = "eft_trivia_manuf_mps",
+    ["eft_trivia_cal2"] = "eft_trivia_calibr_12g",
+    ["eft_trivia_act3"] = "eft_trivia_act_gas",
+    ["eft_trivia_country4"] = "eft_trivia_country_usa",
+    ["eft_trivia_year5"] = "1980"
 }
 
 SWEP.StandardPresets = {
@@ -175,6 +175,21 @@ function SWEP:SetupDataTables(...)
     BaseClass.SetupDataTables(self, ...)
     self:NetworkVar("Bool", 27, "EFTArmedDryfire")
     self:SetEFTArmedDryfire(true)
+end
+
+SWEP.HookP_NameChange = function(self, name)
+    local elements = self:GetElements()
+
+    if elements["eft_aa12_gen2"] then return ARC9:GetPhrase("eft_weapon_aa12gen2")
+	else	return ARC9:GetPhrase("eft_weapon_aa12gen1") end
+
+end
+
+SWEP.HookP_DescriptionChange = function(self, desc)
+    local elements = self:GetElements()
+
+    if elements["eft_aa12_gen2"] then return "eft_weapon_aa12gen2_desc" end
+
 end
 
 SWEP.CustomizePosHook = function(wep, vec)
@@ -783,7 +798,7 @@ SWEP.AttachmentElements = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Barrel",
+        PrintName = "eft_cat_barrel",
         Category = "eft_aa12_barrel",
         Installed = "eft_aa12_barrel_330",
         Bone = "mod_barrel",
@@ -792,7 +807,7 @@ SWEP.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "Stock",
+        PrintName = "eft_cat_stock",
         Category = "eft_stock_aa12",
         Installed = "eft_aa12_stock_std",
         Bone = "mod_stock",
@@ -801,7 +816,7 @@ SWEP.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },    
     {
-        PrintName = "Optic",
+        PrintName = "eft_cat_scope",
         Category = {"eft_optic_medium", "eft_optic_small"},
         Pos = Vector(0, 0, 0),
         Bone = "mod_scope",
@@ -811,7 +826,7 @@ SWEP.Attachments = {
         ExtraSightDistance = -3,
     },
     {
-        PrintName = "Ammunition",
+        PrintName = "eft_cat_ammo",
         Category = {"eft_ammo_12x70"},
         Bone = "mod_magazine",
         Pos = Vector(0, -1.75, -0.9),
@@ -820,7 +835,7 @@ SWEP.Attachments = {
         Integral = "eft_ammo_12x70_7mm",
     },
     {
-        PrintName = "Magazine",
+        PrintName = "eft_cat_magazine",
         Category = "eft_aa12_mag",
         Bone = "mod_magazine",
         Installed = "eft_aa12_mag_8",
@@ -830,7 +845,7 @@ SWEP.Attachments = {
     },
     
     {
-        PrintName = "Conversion",
+        PrintName = "eft_cat_receiver",
         Category = "eft_aa12_gen",
         Bone = "mod_stock",
         Pos = Vector(0, 0, 2),
@@ -838,7 +853,7 @@ SWEP.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "Custom slot",
+        PrintName = "eft_cat_custom",
         Category = {"eft_custom_slot", "eft_custom_aa12"},
         Bone = "mod_stock",
         Pos = Vector(0, -5, 0),

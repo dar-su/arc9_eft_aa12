@@ -49,7 +49,7 @@ ATT.Category = {"eft_aa12_barrel"}
 
 ATT.Attachments = {
     {
-        PrintName = "Muzzle",
+        PrintName = "eft_cat_muzzle",
         Category = {"eft_aa12_th"},
         Pos = Vector(0, 14, 0),
         Ang = Angle(0, 0, 0),
@@ -84,14 +84,14 @@ ATT.Category = {"eft_aa12_barrel"}
 
 ATT.Attachments = {
     {
-        PrintName = "Muzzle",
+        PrintName = "eft_cat_muzzle",
         Category = {"eft_aa12_mz"},
         Pos = Vector(0, 16, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "Mount",
+        PrintName = "eft_cat_mount",
         Category = {"eft_aa12_mount"},
         Pos = Vector(0, 12, 0),
         Ang = Angle(0, 0, 0),
@@ -126,7 +126,7 @@ ATT.Category = {"eft_aa12_barrel"}
 
 ATT.Attachments = {
     {
-        PrintName = "Mount",
+        PrintName = "eft_cat_mount",
         Category = {"eft_aa12_mount"},
         Pos = Vector(0, 12, 0),
         Ang = Angle(0, 0, 0),
@@ -336,14 +336,14 @@ ATT.Category = {"eft_aa12_mount"}
 
 ATT.Attachments = {    
     {
-        PrintName = "Flashlight",
+        PrintName = "eft_cat_flashlight",
         Category = "eft_25mm",
         Pos = Vector(0, 0.5, 1.85),
         Ang = Angle(0, -90, 0),
         Icon_Offset = Vector(0, 0, 1),
     },
     {
-        PrintName = "L Tactical",
+        PrintName = "eft_cat_tactical_l",
         Category = "eft_tactical",
         RejectAttachments = { ["eft_tactical_raptar"] = true },
         Pos = Vector(-1.2, 0.3, 0.7),
@@ -351,7 +351,7 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "R Tactical",
+        PrintName = "eft_cat_tactical_r",
         Category = "eft_tactical",
         RejectAttachments = { ["eft_tactical_raptar"] = true },
         Pos = Vector(1.2, 0.3, 0.7),
@@ -359,7 +359,7 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "B Tactical",
+        PrintName = "eft_cat_tactical_b",
         Category = "eft_tactical",
         RejectAttachments = { ["eft_tactical_raptar"] = true },
         Pos = Vector(0, 0.3, 1.9),
