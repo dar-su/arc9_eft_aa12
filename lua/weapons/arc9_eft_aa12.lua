@@ -9,7 +9,7 @@ SWEP.PrintName = ARC9:GetPhrase("eft_weapon_aa12")
 SWEP.Description = "eft_weapon_aa12gen1_desc"
 
 SWEP.Class = "eft_class_weapon_autosg"
-SWEP.SubCategory = "eft_subcat_sg"
+SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_sg")
 
 SWEP.Trivia = {
     ["eft_trivia_manuf1"] = "eft_trivia_manuf_mps",
